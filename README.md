@@ -7,7 +7,7 @@ This is inspired by the
 [Picture](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) and
 [Video](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)
 elements, and wondering what possibilities we could enable by allowing the
-browser to determine what JavaScript files to laod.
+browser to determine what JavaScript files to load.
 
 * We could load translation files only in the user's language.
 * We could load a simpler site for users requesting [reduced
