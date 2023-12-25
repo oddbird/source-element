@@ -1,14 +1,14 @@
 {
-  "name": "@daviddarnes/component-name",
+  "name": "@oddbird/source-element",
   "version": "1.0.0",
-  "description": "A Web Component for…",
-  "main": "component-name.js",
+  "description": "A Web Component for selective source loading",
+  "main": "source-element.js",
   "scripts": {
     "start": "npx http-server ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/daviddarnes/component-name.git"
+    "url": "git+https://github.com/oddbird/source-element.git"
   },
   "keywords": [
     "web",
@@ -22,12 +22,12 @@
     "access": "public"
   },
   "bugs": {
-    "url": "https://github.com/daviddarnes/component-name/issues"
+    "url": "https://github.com/oddbird/source-element/issues"
   },
   "author": {
-    "name": "David Darnes",
-    "email": "me@daviddarnes.com",
-    "url": "https://darn.es/"
+    "name": "james@oddbird.net",
+    "email": "james@oddbird.net",
+    "url": "https://oddbird.net"
   },
-  "homepage": "https://github.com/daviddarnes/component-name#readme"
+  "homepage": "https://github.com/oddbird/source-element#readme"
 }

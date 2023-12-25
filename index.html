@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>source-element Web Component Demo</title>
+
+    <script type="module" src="source-element.js"></script>
+    <source-element>
+      <script-source
+        src="scripts/dark.js"
+        when="(prefers-color-scheme: dark)"
+      ></script-source>
+      <script-source
+        src="scripts/light.js"
+        when="(prefers-color-scheme: light)"
+      ></script-source>
+    </source-element>
+    <source-element>
+      <script-source src="scripts/es.js" lang="es"></script-source>
+      <script-source src="scripts/de.js" lang="de"></script-source>
+      <script-source src="scripts/en.js"></script-source>
+    </source-element>
+    <source-element>
+      <script-source
+        src="scripts/print.js"
+        when="print"
+        lang="de"
+      ></script-source>
+      <script-source
+        src="scripts/screen.js"
+        when="screen"
+        lang="de"
+      ></script-source>
+    </source-element>
+  </head>
+  <body>
+    <h2>General usage example</h2>
+    <div id="output"></div>
+  </body>
+</html>

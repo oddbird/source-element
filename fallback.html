@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>source-element Web Component Demo</title>
+    <script type="module" src="source-element.js"></script>
+    
+  </head>
+  <body>
+    <h2>Fallback</h2>
+    <p>The Fallback content is added to the DOM, and therefore called, before
+    the `source-element` is able to cancel.</p>
+    <div id="output"></div>
+    <source-element>
+      <script-source src="scripts/screen.js" when="screen"></script-source>
+      <script type="module" src="scripts/fallback.js"></script>
+    </source-element>
+  </body>
+</html>
