@@ -77,12 +77,6 @@ are checked in the order they appear in the DOM, this must be last.
 </source-element>
 ```
 
-## Features
-
-This Web Component allows you to:
-
-- Check for…
-
 ## Installation
 
 You have a few options (choose one of these):
@@ -96,12 +90,18 @@ You have a few options (choose one of these):
 
 ### Usage
 
-Make sure you include the `<script>` in your project (choose one of these):
+Make sure you include the `<script>` in your project:
 
 ```html
 <!-- Host yourself -->
 <script type="module" src="source-element.js"></script>
 ```
+
+## Next steps
+
+- Figure out fallback using `<script>`.
+- Better script insertion, using the attributes from the `script-source` element.
+- Propose a native, non-Web Component for inclusion in browsers.
 
 ## Credit
 
