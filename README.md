@@ -109,3 +109,16 @@ With thanks to the following people:
 
 - [Zach Leatherman](https://zachleat.com) for the conditional inspiration in [is-land](https://github.com/11ty/is-land).
 - David Darnes for the [Component Template](https://github.com/daviddarnes/component-template).
+
+## Support
+
+At OddBird,
+we enjoy collaborating and contributing
+as part of an open web community.
+But those contributions take time and effort.
+If you're interested in supporting our
+open-source work,
+consider becoming a
+[GitHub sponsor](https://github.com/sponsors/oddbird),
+or contributing to our
+[Open Collective](https://opencollective.com/oddbird-open-source).
