@@ -5,8 +5,8 @@ class SourceElement extends HTMLElement {
     }
   }
 
-  static findMatch = node => {
-    const sources = [...node.children].filter(child => child.tagName === 'SCRIPT-SOURCE');
+  findMatch() {
+    const sources = [...this.children].filter(child => child.tagName === 'SCRIPT-SOURCE');
     return sources.find(source => {
       const when = source.attributes['when']?.value;
       const lang = source.attributes['lang']?.value;
@@ -18,12 +18,11 @@ class SourceElement extends HTMLElement {
     })
   }
 
-  static appendScript = node => {
-    const match = SourceElement.findMatch(node);
-
+  appendScript(){
+    const match = this.findMatch();
     if (!match) return;
 
-    match.setAttribute('active', true);
+    match.setAttribute('active', '');
     const script = document.createElement("script");
 
     script.type = 'module';
@@ -35,7 +34,7 @@ class SourceElement extends HTMLElement {
 
   constructor() {
     super();
-    SourceElement.appendScript(this);
+    this.appendScript();
   }
 
   connectedCallback() {
