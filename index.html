@@ -33,9 +33,47 @@
         lang="de"
       ></script-source>
     </source-element>
+    <source-element>
+      <script-source src="scripts/es.js" hash="es"></script-source>
+      <script-source src="scripts/de.js" hash="de"></script-source>
+    </source-element>
+    <source-element>
+      <script-source src="scripts/es.js" param="es"></script-source>
+      <script-source src="scripts/de.js" param="de"></script-source>
+    </source-element>
+    <source-element>
+      <script-source
+        src="scripts/es.js"
+        param="lang"
+        paramValue="es"
+      ></script-source>
+      <script-source
+        src="scripts/de.js"
+        param="lang"
+        paramValue="de"
+      ></script-source>
+    </source-element>
+    <source-element>
+      <script-source
+        src="scripts/blink.js"
+        support="text-decoration-style:blink"
+      ></script-source>
+      <script-source
+        src="scripts/wavy.js"
+        support="text-decoration-style:wavy"
+      ></script-source>
+    </source-element>
   </head>
   <body>
     <h2>General usage example</h2>
+    <ul>
+      <li><a href="?lang=es">?lang=es</a></li>
+      <li><a href="?lang=de">?lang=de</a></li>
+      <li><a href="?es">?es</a></li>
+      <li><a href="?de">?de</a></li>
+      <li><a href="/#es">/#es</a></li>
+      <li><a href="/#de">/#de</a></li>
+    </ul>
     <div id="output"></div>
   </body>
 </html>

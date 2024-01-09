@@ -1,3 +1,4 @@
+import conditionMatch from "./condition-match.js";
 class SourceElement extends HTMLElement {
   static register(tagName) {
     if ("customElements" in window) {
@@ -8,17 +9,24 @@ class SourceElement extends HTMLElement {
   findMatch() {
     const sources = [...this.children].filter(child => child.tagName === 'SCRIPT-SOURCE');
     return sources.find(source => {
-      const when = source.attributes['when']?.value;
-      const lang = source.attributes['lang']?.value;
-      if (!when && !lang) return true;
-
-      const whenMatch = when ? window.matchMedia && window.matchMedia(when).matches : true;
-      const langMatch = lang ? navigator.languages.includes(lang) : true;
-      return whenMatch && langMatch;
+      const withMedia = source.attributes['when']?.value;
+      const withLang = source.attributes['lang']?.value;
+      const withHash = source.attributes['hash']?.value;
+      const withParam = source.attributes['param']?.value;
+      const withParamValue = source.attributes['paramValue']?.value;
+      const withSupport = source.attributes['support']?.value;
+      return conditionMatch({
+        withMedia,
+        withLang,
+        withHash,
+        withParam,
+        withParamValue,
+        withSupport,
+      });
     })
   }
 
-  appendScript(){
+  appendScript() {
     const match = this.findMatch();
     if (!match) return;
 
